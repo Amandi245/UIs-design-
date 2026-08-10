@@ -14,7 +14,7 @@ const cormorant = Cormorant_Garamond({
 
 const Footer = () => {
   return (
-    <footer className="bg-[#F5F360] text-black border-t border-black/30">
+    <footer className="bg-[#F5F360] text-black border-t border-black/30 pt-24 pb-0">
       <div className="mx-auto flex max-w-7xl">
         <div className="w-[80%] border-r border-black/30 px-10 py-12">
           <Image
@@ -85,8 +85,18 @@ const Footer = () => {
           <div
             className={`${dmSans.className} self-end text-right text-[14px] leading-5 pb-4`}
           >
-            <p>Privacy-policy</p>
-            <p>terms & conditions</p>
+            <button
+              type="button"
+              className="block w-full text-right transition-colors hover:text-gray-800"
+            >
+              Privacy-policy
+            </button>
+            <button
+              type="button"
+              className="block w-full text-right transition-colors hover:text-black"
+            >
+              terms & conditions
+            </button>
           </div>
         </div>
       </div>

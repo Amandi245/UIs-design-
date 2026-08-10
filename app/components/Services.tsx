@@ -57,7 +57,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="bg-white pt-6 pb-12 overflow-hidden">
+    <section className="w-full bg-white">
       <div className="overflow-hidden border-b border-gray-300 py-3">
         <Marquee speed={70} gradient={false}>
           {[1, 2, 3, 4].map((item) => (
@@ -101,20 +101,23 @@ const Services = () => {
         {services.map((service, index) => (
           <div
             key={index}
-            className="group w-full border-b border-gray-300 bg-white hover:bg-[#F5F360] transition-colors duration-500 cursor-pointer"
+            className="group w-full cursor-pointer border-b border-gray-300 bg-white transition-colors duration-500 hover:bg-[#F5F360]"
           >
-            <div className="mx-auto flex max-w-7xl h-[220px] items-center justify-between px-10">
+            <div className="mx-auto flex h-[180px] max-w-7xl items-center justify-between px-10">
               <div className="w-1/2">
                 <h3
-                  className={`${dmSans.className} text-[80px] font-light text-black transition-all duration-500 group-hover:text-[64px]`}
+                  className={`${dmSans.className} whitespace-nowrap text-[96px] font-[300] leading-[1.2] tracking-[0] text-black transition-all duration-500 group-hover:text-[60px] group-hover:font-[500] group-hover:leading-[1.2]`}
                 >
                   {service.title}
                 </h3>
               </div>
 
-              <div className="w-[45%] grid grid-cols-2 gap-x-10 gap-y-3 opacity-0 translate-y-4 pointer-events-nonetransition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto">
+              <div className="grid w-[45%] grid-flow-col grid-rows-3 gap-x-10 gap-y-0 translate-y-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
                 {service.details.map((item, i) => (
-                  <p key={i} className="text-base text-gray-800">
+                  <p
+                    key={i}
+                    className={`${dmSans.className} text-base font-[300] text-gray-800`}
+                  >
                     {item}
                   </p>
                 ))}

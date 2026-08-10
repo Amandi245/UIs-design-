@@ -44,7 +44,7 @@ const works = [
 const WorkSection = () => {
   return (
     <section className="bg-white pb-20 overflow-hidden">
-      <div className="overflow-hidden pt-0 pb-1">
+      <div className="overflow-hidden pt-14 pb-14">
         <Marquee speed={70} gradient={false}>
           {[1, 2, 3, 4].map((item) => (
             <div

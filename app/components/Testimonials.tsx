@@ -4,7 +4,7 @@ import { DM_Sans, Cormorant_Garamond } from "next/font/google";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
+  weight: ["300", "400", "500", "700"],
 });
 
 const cormorant = Cormorant_Garamond({
@@ -18,7 +18,7 @@ const testimonials = [
     title: "Brew & Bean Packaging",
     description: "Eco-friendly coffee packaging with a modern twist.",
     review:
-      "Working with this team has been a game changer for our business. The results exceeded our expectations and we couldn't be happier.",
+      "Working with this team has been a game changer for our business. The results exceeded our expectations, and the process was smooth from start to finish.",
     avatar: "/images/person1.png",
     name: "Alex Johnson",
     role: "CEO of Bright Solutions",
@@ -30,10 +30,10 @@ const testimonials = [
     title: "NovTech Landing Page",
     description: "Modern landing page with a clean user experience.",
     review:
-      "Everything from communication to execution was outstanding. Highly recommended.",
+      "When we first approached this team, we only had a rough concept of what we wanted. They took the time to truly understand our goals and turned the vision into something much more.",
     avatar: "/images/person2.png",
     name: "Priya Patel",
-    role: "Operations Manager",
+    role: "Operations Manager at Nova Inc.",
     bg: "#D78600",
     text: "#ffffff",
   },
@@ -42,10 +42,10 @@ const testimonials = [
     title: "Urban Leaf Mobile App",
     description: "Mobile experience designed with usability first.",
     review:
-      "Communication was excellent and the final product perfectly matched our expectations.",
+      "From start to finish, the communication was clear, and the end product was exactly what we needed. I would highly recommend them.",
     avatar: "/images/person3.png",
     name: "Daniel Smith",
-    role: "Founder",
+    role: "Product Manager at AlphaWorks",
     bg: "#E9B0F2",
     text: "#000000",
   },
@@ -54,10 +54,10 @@ const testimonials = [
     title: "Horizon Branding",
     description: "Complete branding solution with a modern identity.",
     review:
-      "The collaboration process was smooth and the quality exceeded our expectations.",
+      "The collaboration process was smooth, transparent, and truly enjoyable. They were responsive and always driven by results.",
     avatar: "/images/person4.png",
     name: "Samantha Lee",
-    role: "Marketing Director",
+    role: "Marketing Director at Horizon Group",
     bg: "#0C5C48",
     text: "#ffffff",
   },
@@ -65,7 +65,7 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="bg-white overflow-hidden">
+    <section className="w-full bg-white">
       <div className="overflow-hidden pt-0 pb-20">
         <Marquee speed={70} gradient={false}>
           {[1, 2, 3, 4].map((item) => (
@@ -105,17 +105,17 @@ const Testimonials = () => {
         </Marquee>
       </div>
 
-      <div className="max-w-7xl mx-auto px-10 pt-0 pb-8 flex flex-col gap-2">
+      <div className="mx-auto flex max-w-7xl flex-col gap-2 px-10 pb-8">
         {testimonials.map((item, index) => (
           <article
             key={item.title}
-            className="flex flex-col md:flex-row overflow-hidden rounded min-h-47.5"
+            className="flex h-[300px] w-full overflow-hidden rounded md:flex-row"
             style={{
               backgroundColor: item.bg,
               color: item.text,
             }}
           >
-            <div className="relative w-100 h-100 shrink-0 ">
+            <div className="relative h-full w-full shrink-0 md:w-[27%]">
               <Image
                 src={item.image}
                 alt={item.title}
@@ -125,10 +125,10 @@ const Testimonials = () => {
               />
             </div>
 
-            <div className="w-full md:w-[43%] px-8 py-6 flex flex-col justify-between">
+            <div className="flex w-full flex-col justify-between px-8 py-6 md:w-[43%]">
               <div>
                 <h3
-                  className={`${dmSans.className} text-[44px] leading-[100%] font-medium tracking-[-0.03em] max-w-[10ch]`}
+                  className={`${dmSans.className} max-w-[10ch] text-[40px] font-medium leading-[100%] tracking-[-0.03em]`}
                 >
                   {item.title}
                 </h3>
@@ -145,45 +145,49 @@ const Testimonials = () => {
               </div>
 
               <p
-                className={`${dmSans.className} text-sm leading-6 max-w-[24ch]`}
+                className={`${dmSans.className} max-w-[24ch] text-sm leading-6`}
               >
                 {item.description}
               </p>
             </div>
 
             <div
-              className="w-full md:w-[30%] border-l-0 md:border-l px-6 py-5 flex flex-col justify-between"
+              className="flex h-full w-full flex-col px-6 pt-4 md:w-[30%] md:border-l"
               style={{
                 borderLeftColor: index % 2 === 0 ? "#000000" : "#ffffff",
               }}
             >
-              <p className={`${dmSans.className} text-sm leading-6`}>
+              <p className={`${dmSans.className} text-[14px] leading-[15px]`}>
                 "{item.review}"
               </p>
 
+              <div className="mt-auto mb-2">
+                <Image
+                  src={item.avatar}
+                  alt={item.name}
+                  width={50}
+                  height={50}
+                  className="rounded-full object-cover"
+                />
+              </div>
+
               <div
-                className="-mx-6 border-t mt-6 pt-4 px-6 flex items-center gap-4"
+                className="-mx-6 mt-0 h-[50px] border-t px-6 py-4"
                 style={{
                   borderTopColor: index % 2 === 0 ? "#000000" : "#ffffff",
                 }}
               >
-                <Image
-                  src={item.avatar}
-                  alt={item.name}
-                  width={56}
-                  height={56}
-                  className="rounded-full object-cover"
-                />
+                <h4
+                  className={`${dmSans.className} text-[14px] font-medium leading-[12px]`}
+                >
+                  {item.name}
+                </h4>
 
-                <div>
-                  <h4 className={`${dmSans.className} text-sm font-medium`}>
-                    {item.name}
-                  </h4>
-
-                  <p className={`${dmSans.className} text-xs opacity-70`}>
-                    {item.role}
-                  </p>
-                </div>
+                <p
+                  className={`${dmSans.className} text-[10px] leading-[10px] opacity-70`}
+                >
+                  {item.role}
+                </p>
               </div>
             </div>
           </article>
