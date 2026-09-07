@@ -14,7 +14,7 @@ const cormorant = Cormorant_Garamond({
 const ContactSection = () => {
   return (
     <>
-      <section className="relative min-h-[900px] overflow-hidden bg-white py-24">
+      <section id="contact" className="relative min-h-[900px] overflow-hidden bg-white py-24">
         {/* Yellow glow */}
         <div
           className="

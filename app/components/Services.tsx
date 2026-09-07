@@ -57,7 +57,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="w-full bg-white">
+    <section id="services" className="w-full bg-white">
       <div className="overflow-hidden border-b border-gray-300 py-3">
         <Marquee speed={70} gradient={false}>
           {[1, 2, 3, 4].map((item) => (

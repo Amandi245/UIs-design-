@@ -11,7 +11,7 @@ const images = [
 
 const AboutSection = () => {
   return (
-    <section className="bg-black text-white py-16">
+    <section id="about" className="bg-black text-white py-16">
       <div className="max-w-7xl mx-auto px-10">
         <h2 className="text-7xl font-bold leading-tight">
           We build <em className="italic font-normal">experiences</em>
