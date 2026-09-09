@@ -28,7 +28,11 @@ const Navbar = () => {
 
   return (
     <nav className="relative z-30 flex items-center justify-between px-6 py-6 md:px-12">
-      <Link href="/" aria-label="Elevate home" className="flex items-center gap-3">
+      <Link
+        href="/"
+        aria-label="Elevate home"
+        className="flex items-center gap-3"
+      >
         {isAbout ? (
           <>
             <Image

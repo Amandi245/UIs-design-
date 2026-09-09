@@ -14,8 +14,7 @@ const AboutGlance = () => {
         <h2
           className={`${cormorant.className} mb-14 text-center text-[36px] leading-tight text-black sm:text-[48px] md:mb-20 md:text-[56px]`}
         >
-          a quick glance at{" "}
-          <em className="italic font-semibold">Elevate</em>
+          a quick glance at <em className="italic font-semibold">Elevate</em>
         </h2>
 
         <div className="relative mx-auto max-w-4xl">
