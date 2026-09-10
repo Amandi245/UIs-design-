@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Cormorant_Garamond } from "next/font/google";
 import Navbar from "./Navbar";
 

@@ -1,37 +1,45 @@
+import Image from "next/image";
 import Link from "next/link";
+import styles from "./work.module.css";
 
-export default function Hero() {
+export default function WorkHero() {
   return (
-    <section className="min-h-screen bg-white px-5 py-6 text-black">
-      {/* Navbar */}
-      <header className="flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="text-xl">
-          Elevate
+    <section className={styles.hero} aria-labelledby="work-title">
+      <header className={styles.header}>
+        <Link href="/" className={styles.logo} aria-label="Elevate home">
+          <Image
+            src="/images/hero-gauge.svg"
+            alt=""
+            width={26}
+            height={26}
+            priority
+          />
+          <span>Elevate</span>
         </Link>
-
-        {/* Navigation */}
-        <nav className="flex gap-4 text-sm">
+        <nav aria-label="Main navigation">
           <Link href="/about">about</Link>
           <Link href="/services">services</Link>
-          <Link href="/work">work</Link>
+          <Link href="/work" aria-current="page">
+            work
+          </Link>
           <Link href="/#contact">contact</Link>
         </nav>
       </header>
-
-      {/* Hero content */}
-      <div className="flex min-h-[80vh] flex-col items-center justify-center text-center">
-        <div className="mb-6 h-10 w-10 rounded-full border border-[#d6d83c]">
-          <div className="mx-auto mt-3 h-3 w-3 bg-[#d6d83c]" />
-        </div>
-
-        <p className="text-6xl">our</p>
-
-        <h1 className="font-serif text-8xl font-bold text-[#d6d83c]">Work</h1>
-
-        <p className="mt-6 text-sm text-black/60">
-          Comprehensive case-studies. Exceptional Results
-        </p>
+      <div className={styles.heading}>
+        <Image
+          className={styles.gauge}
+          src="/images/hero-gauge.svg"
+          alt=""
+          width={62}
+          height={62}
+          priority
+        />
+        <h1 id="work-title">
+          <span>our</span>
+          <strong>Work</strong>
+        </h1>
+        <p>Comprehensive case-studies, Exceptional Results</p>
+        <span className={styles.line} aria-hidden="true" />
       </div>
     </section>
   );

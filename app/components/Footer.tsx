@@ -60,14 +60,14 @@ const Footer = () => {
             </Link>
 
             <Link
-              href="/portfolio"
+              href="/work"
               className={`${dmSans.className} text-[36px] text-[#7F7E2C] transition-colors hover:text-black`}
             >
               portfolio
             </Link>
 
             <Link
-              href="/contact"
+              href="/#contact"
               className={`${dmSans.className} text-[36px] text-[#7F7E2C] transition-colors hover:text-black`}
             >
               contact

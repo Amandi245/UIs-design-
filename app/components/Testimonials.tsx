@@ -158,7 +158,7 @@ const Testimonials = () => {
               }}
             >
               <p className={`${dmSans.className} text-[14px] leading-[15px]`}>
-                "{item.review}"
+                &ldquo;{item.review}&rdquo;
               </p>
 
               <div className="mt-auto mb-2">

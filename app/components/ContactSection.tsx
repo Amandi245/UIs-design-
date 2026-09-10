@@ -56,7 +56,7 @@ const ContactSection = () => {
             </p>
 
             <p className={`${dmSans.className} text-[14px] text-black`}>
-              Let's turn it into something amazing together.
+              Let&apos;s turn it into something amazing together.
             </p>
           </div>
 

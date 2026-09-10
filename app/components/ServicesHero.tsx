@@ -132,7 +132,7 @@ export default function ServicesHero() {
           >
             services
           </Link>
-          <Link href="/#work" className="hover:opacity-60 transition-opacity">
+          <Link href="/work" className="hover:opacity-60 transition-opacity">
             work
           </Link>
           <Link
